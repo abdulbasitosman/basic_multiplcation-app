@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Multiplcation App</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="main-style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <nav class="max-width nav">
+        <div class="logo"><a href="#home"id='logo'>Brand</a></div>
+
+        <div class="nav-menu">
+          <div class="nav-list">
+            <ul class="text-cap nav-menu-list">
+              <li class="nav-item">
+                <a href="#logo" class="active-nav_item link nav-link">home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="link nav-link">contact</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="link nav-link">about</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle">
+          <button class="open-nav">
+            <i class=" fa-solid fa-bars fa-fw fa-2x"></i>
+          </button>
+          <button class="close-nav">
+            <i class=" fa-solid fa-close fa-fw fa-2x"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main" id="main">
+      <h1 class="title text-cap">basic multiplication app</h1>
+      <div class="container">
+        <form class="form m-d" id="form">
+          <div class="score m-d text-cap">score: <span>0</span></div>
+          <div class="question-box">
+            <span class="first-opprand">1</span> *
+            <span class="last-opprand">1</span> =
+            <input type="text" class="ans" maxlength="2" autofocus />
+          </div>
+
+          <button type="submit" class="btn" id="submit-ans">submit</button>
+        </form>
+      </div>
+    </main>
+
+    <!-- js -->
+    <script src="app.js"></script>
+  </body>
+</html>

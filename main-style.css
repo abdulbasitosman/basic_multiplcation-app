@@ -1,0 +1,267 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: rgb(221, 221, 221);
+}
+
+.max-width {
+  max-width: 80%;
+  margin-inline: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  background-color: #ff0055;
+  padding-block: 1em;
+}
+
+.logo {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 4.5em;
+  z-index: 2;
+}
+
+.nav-menu-list {
+  width: 100%;
+  height: 0px;
+  background-color: white;
+  color: black;
+  padding-inline: 3em 0;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.activate .nav-menu-list {
+  height: 180px;
+}
+
+.nav-item {
+  width: 100%;
+  padding-block: 1em;
+}
+
+.nav-toggle {
+  color: #353333;
+  display: flex;
+  justify-content: center;
+  padding: 0.3em;
+  transition: 1s ease;
+}
+
+.nav-link {
+  display: block;
+}
+
+.nav-link:hover {
+  color: #414149;
+}
+
+.active-nav_item {
+  font-weight: 600;
+  color: #774047;
+}
+
+.nav-toggle * {
+  cursor: pointer;
+}
+
+.open-nav {
+  display: inline-block;
+  transition: 1s ease;
+}
+
+.close-nav {
+  display: none !important;
+}
+
+/* js toggles */
+.activate .close-nav {
+  display: inline-block !important;
+  transition: 1s ease;
+}
+
+.activate .open-nav {
+  display: none;
+}
+
+/* media for nav */
+@media screen and (min-width: 601px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-menu {
+    width: unset;
+    display: flex;
+
+    position: unset;
+  }
+
+  .nav-menu-list {
+    height: auto;
+    background-color: unset;
+    color: black;
+    padding-inline: 3em 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-menu-list {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+  }
+
+  .nav-item {
+    font-size: 1.3rem;
+    padding: 0.3em;
+    color: #915a5a;
+  }
+
+  .activate .nav-menu-list {
+    height: auto;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+
+.main {
+  display: grid;
+  justify-content: center;
+  align-content: flex-start;
+  row-gap: 2em;
+
+  height: calc(100vh - 5em);
+  background-image: url("assets/pattern_memphis-6_1_3_0-0_80_2__9e005a_ff5500_380099_ff0055_ffbb00.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 900;
+  background-color: #190be088;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: cursive;
+  -webkit-text-stroke: 2px rgb(252, 251, 251);
+  margin-block-start: 2em;
+  color: transparent;
+}
+
+.container {
+  width: max-content;
+  display: grid;
+  place-content: center;
+  background-color: rgba(250, 245, 245, 0.397);
+  backdrop-filter: blur(5px);
+  border: 1px solid #ff0055;
+
+  box-shadow: 0 0 10px rgb(43, 42, 42);
+  border-radius: 10px;
+  padding: 1em 2em;
+  margin-inline: auto;
+}
+
+.m-d {
+  margin-block-end: 2em;
+}
+
+.text-cap {
+  text-transform: capitalize;
+}
+
+.score {
+  text-align: right;
+  font-size: 1.4rem;
+  color: rgb(30, 117, 35);
+}
+
+.form {
+  margin-block-end: 1em;
+}
+
+.question-box {
+  display: flex;
+  column-gap: 0.5em;
+  align-items: center;
+  margin-block: 0 1em;
+  font-size: 3rem;
+}
+
+.first-opprand,
+.last-opprand,
+.ans {
+  color: #353333;
+  font-weight: 600;
+}
+
+input {
+  background: transparent;
+  border: none;
+}
+
+.ans {
+  width: 80px;
+  max-width: max-content;
+  text-align: center;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 0.2em;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.btn {
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #ff0055;
+  border-radius: 5px;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(0.9);
+}
